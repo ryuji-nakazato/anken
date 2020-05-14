@@ -7,8 +7,11 @@ from django.views.generic import TemplateView
 from accounts import forms
 from .forms import MyPasswordChangeForm
 from django.urls import reverse_lazy
+#csrf無効化のための記述
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 class MyLoginView(LoginView):
     form_class = forms.LoginForm
     template_name = "accounts/login.html"
