@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'anken.urls'
 
-SSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifstStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifstStaticFilesStorage'
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 TEMPLATES = [
