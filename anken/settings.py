@@ -27,10 +27,7 @@ SECRET_KEY = '72n@k6+655r4l%ep6yd-qtd#6r8_b^ohza@i5#)ez-10mwnfte'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
-    import django_heroku  # 追加
-    django_heroku.settings(locals())  # 追加
+
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -62,6 +59,11 @@ MIDDLEWARE = [
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+if not DEBUG:
+    SECRET_KEY = os.environ['SECRET_KEY']
+    import django_heroku  # 追加
+    django_heroku.settings(locals())  # 追加
 
 ROOT_URLCONF = 'anken.urls'
 
