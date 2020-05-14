@@ -6,9 +6,11 @@ from django.views.generic.list import ListView
 from django.utils import timezone
 from datetime import date, datetime
 from django.views import generic
+#csrf無効化のための記述
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
-
+@csrf_exempt
 def top(request):
     return render(request,
                   'cms/top.html')
