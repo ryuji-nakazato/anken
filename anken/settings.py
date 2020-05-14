@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'anken.wsgi.application'
 #    }
 #}
 
-#-------ローカル用--------#
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql_psycopg2',
